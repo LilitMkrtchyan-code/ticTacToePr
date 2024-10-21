@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+   <title>Tic Tac Toe</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <div class="game-container">
+         <form>
+            <input type="number" id="quantity" value="3" min="3" max="20" step="1">
+            <button type="submit" id="add-button" class="add-button">Add</button>
+         </form>
+         <h1>Tic Tac Toe</h1>
+         <div id="game-board" class="game-board"></div>
+         <button id="restart-button" class="restart-button">Restart</button>
+      </div>
+
+      <div id="popup" class="popup hide">
+         <div class="popup-content">
+            <img src="images/winner.png" alt="win" id="popup-image">
+            <h2>Game Over!</h2>
+            <div id="status-text" class="status-text"></div>
+            <button id="new-game" class="new-game">New Game</button>
+         </div>
+      </div>
+
+      <audio id="win-sound" src="audio/winner.mp3" preload="auto"></audio>
+      <audio id="draw-sound" src="audio/draw.mp3" preload="auto"></audio>
+   </div>
+
+   <script src="script.js"></script>
+</body>
+</html>
